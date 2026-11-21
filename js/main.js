@@ -24,7 +24,7 @@
   function paintChrome(theme) {
     var dark = theme === "dark";
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute("content", dark ? "#070910" : "#eef3f8");
+    if (meta) meta.setAttribute("content", dark ? "#12110f" : "#f6f1e7");
   }
 
   function apply(theme) {
@@ -50,18 +50,35 @@
     });
   }
 
-  var rotator = document.querySelector("[data-rotate]");
-  var words = ["Python", "FastAPI", "PostgreSQL", "Odoo", "fintech"];
-  if (rotator) {
-    if (reduce) {
-      rotator.textContent = words.join(" · ");
-    } else {
-      var index = 0;
-      window.setInterval(function () {
-        index = (index + 1) % words.length;
-        rotator.textContent = words[index];
-      }, 1800);
-    }
+  var links = Array.prototype.slice.call(document.querySelectorAll(".nav a"));
+  var sections = links.map(function (link) {
+    return { link: link, section: document.querySelector(link.getAttribute("href")) };
+  }).filter(function (item) { return item.section; });
+
+  function mark(id) {
+    links.forEach(function (link) {
+      if (link.getAttribute("href") === "#" + id) link.setAttribute("aria-current", "true");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
+  if ("IntersectionObserver" in window && sections.length) {
+    var visible = new Map();
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        visible.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
+      });
+      var best = null;
+      var bestRatio = 0;
+      visible.forEach(function (ratio, id) {
+        if (ratio > bestRatio) {
+          best = id;
+          bestRatio = ratio;
+        }
+      });
+      if (best) mark(best);
+    }, { rootMargin: "-20% 0px -55% 0px", threshold: [0, 0.15, 0.4] });
+    sections.forEach(function (item) { spy.observe(item.section); });
   }
 
   var nodes = document.querySelectorAll("[data-reveal]");
