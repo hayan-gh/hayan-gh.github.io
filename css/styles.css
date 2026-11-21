@@ -331,8 +331,10 @@ a { color: inherit; }
 }
 
 h1 {
-  font-size: clamp(3.1rem, 7vw, 5.4rem);
-  max-width: 10ch;
+  /* Sized to the content column (viewport minus the rail, gap, and page inset), not the full window. */
+  font-size: clamp(2.9rem, calc((100vw - 20.5rem) / 9.5), 5rem);
+  max-width: 100%;
+  white-space: nowrap;
   margin-bottom: 0.7rem;
 }
 
@@ -643,8 +645,9 @@ h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); }
   .brand-name { display: none; }
 
   h1 {
-    max-width: none;
-    font-size: clamp(2.7rem, 12vw, 3.6rem);
+    max-width: 100%;
+    font-size: clamp(2.4rem, 8vw, 3.4rem);
+    white-space: nowrap;
   }
 
   .role,
@@ -666,6 +669,14 @@ h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); }
   .nav a { min-height: 44px; }
 
   .site-footer .wrap { width: min(100% - 1.8rem, 720px); }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: clamp(1.7rem, 11.2vw, 2.85rem);
+    max-width: 100%;
+    white-space: nowrap;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
