@@ -118,7 +118,7 @@ def main():
         pdf,
         "Software Engineer",
         "ARAMED (Arabian Medical Enterprises)",
-        "Dec 2023 – Aug 2024  ·  Part-time  ·  Remote",
+        "Dec 2023 – Aug 2024  ·  Full-time  ·  Remote",
     )
     bullets(
         pdf,
