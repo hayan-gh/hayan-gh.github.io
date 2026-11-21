@@ -1,0 +1,5 @@
+Fraunces, Newsreader, and Caveat are licensed under the SIL Open Font License, Version 1.1. The license text is in OFL.txt.
+
+Fraunces: Copyright 2020 The Fraunces Project Authors (https://github.com/undercasetype/Fraunces).
+Newsreader: Copyright 2020 The Newsreader Project Authors (https://github.com/productiontype/Newsreader).
+Caveat: Copyright 2014 The Caveat Project Authors (https://github.com/googlefonts/caveat).

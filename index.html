@@ -10,7 +10,7 @@
     />
     <meta name="author" content="Hayan Aljabr" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#f7f5f0" />
+    <meta name="theme-color" content="#f6f1e6" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Hayan Aljabr — Software Engineer | Python Backend &amp; Odoo ERP" />
     <meta
@@ -67,6 +67,7 @@
   <body>
     <a class="skip" href="#content">Skip to content</a>
     <header class="mast">
+      <a class="home" href="#top">Hayan Aljabr</a>
       <nav class="nav" aria-label="Page">
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
@@ -74,43 +75,47 @@
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
-        Dark mode
-      </button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
     </header>
 
     <main id="content">
       <article class="page">
-        <header class="intro" id="top">
+        <header class="hero" id="top">
+          <p class="scribble" aria-hidden="true">wallets first</p>
           <h1 id="name">Hayan Aljabr</h1>
-          <p class="title">Software Engineer | Python Backend &amp; Odoo ERP</p>
-          <p class="lede">
-            I'm based in Damascus, Syria, and I'm open to relocation. I work on Python
-            backend systems and Odoo ERP.
+          <p class="title">Backend Engineer, Fintech &amp; Payments</p>
+          <p class="punch">
+            I build the backends for <span class="mark">wallets, payments, banking APIs, and KYC</span>.
           </p>
-          <p>
-            I'm a Python backend engineer building FastAPI and Flask services on PostgreSQL
-            for digital wallets and banking APIs. The work includes customer, merchant and
-            corporate onboarding with Keycloak, transaction lifecycles around persisted
-            payment intents and payment state machines, server-issued idempotency
-            references, reconciliation of ambiguous ledger outcomes, and asynchronous
-            processing with Celery and Redis.
-          </p>
-          <p>
-            The stack is Python, FastAPI, PostgreSQL, Odoo, fintech: Python backend and
-            Odoo ERP. Now, rmz · e-wallet app.
-          </p>
-          <p class="links">
-            <a href="cv/Hayan_Aljabr_CV_EN.pdf" download>Download CV</a>
-            <a href="mailto:hayan.aljaber@gmail.com">hayan.aljaber@gmail.com</a>
-            <a href="https://github.com/hayan-gh" rel="me">GitHub</a>
-          </p>
+          <div class="hero-split">
+            <div>
+              <p>
+                Based in Damascus, Syria. Open to relocation. I'm at rmz right now, building
+                an e-wallet backend. I also customize Odoo ERP.
+              </p>
+              <p>
+                I'm a Python backend engineer building FastAPI and Flask services on PostgreSQL
+                for digital wallets and banking APIs. The work includes customer, merchant and
+                corporate onboarding with Keycloak, transaction lifecycles around persisted
+                payment intents and payment state machines, server-issued idempotency
+                references, reconciliation of ambiguous ledger outcomes, and asynchronous
+                processing with Celery and Redis.
+              </p>
+              <p>Python, FastAPI, PostgreSQL, Odoo, fintech.</p>
+            </div>
+            <p class="links">
+              <a href="cv/Hayan_Aljabr_CV_EN.pdf" download>Download CV</a>
+              <a href="mailto:hayan.aljaber@gmail.com">hayan.aljaber@gmail.com</a>
+              <a href="https://www.linkedin.com/in/hayan-aljabr" rel="me">LinkedIn</a>
+              <a href="https://github.com/hayan-gh" rel="me">GitHub</a>
+            </p>
+          </div>
         </header>
 
         <section id="experience" aria-labelledby="experience-heading">
           <h2 id="experience-heading">Experience</h2>
           <ol class="timeline">
-            <li class="role">
+            <li class="role now">
               <p class="meta">Nov 2025 – Present · Full-time · On-site, Damascus</p>
               <h3>Software Engineer</h3>
               <p class="org">rmz</p>
@@ -173,10 +178,27 @@
         <section id="projects" aria-labelledby="projects-heading">
           <h2 id="projects-heading">Selected projects</h2>
 
-          <section class="project" aria-labelledby="wafra-pay">
+          <section class="feature" aria-labelledby="wafra-pay">
+            <p class="scribble feature-note">P2P, QR, bills, the ledger</p>
             <h3 id="wafra-pay">Wafra Pay</h3>
             <p class="where">rmz · Digital wallet and banking integrations</p>
             <p class="tools">FastAPI, Flask, Apache Fineract</p>
+            <figure class="flow">
+              <figcaption class="visually-hidden">
+                Wallet provisioning connects to P2P, QR and bill payments, then an Apache Fineract
+                ledger, with deposit matching and loyalty alongside.
+              </figcaption>
+              <div class="node tilt-a"><span>Wallet</span></div>
+              <span class="join" aria-hidden="true"></span>
+              <div class="node tilt-b"><span>P2P / QR / bill</span></div>
+              <span class="join" aria-hidden="true"></span>
+              <div class="node tilt-c"><span>Fineract ledger</span></div>
+              <div class="side">
+                <span>deposit matching</span>
+                <span>loyalty</span>
+                <span>cash-out</span>
+              </div>
+            </figure>
             <ul>
               <li>
                 Delivered end-to-end digital wallet flows connecting wallet provisioning,
@@ -253,34 +275,36 @@
 
         <section id="skills" aria-labelledby="skills-heading">
           <h2 id="skills-heading">Skills</h2>
-          <div class="skill">
-            <h3>Backend</h3>
-            <p>
-              Python, FastAPI, Flask, REST APIs, SQLAlchemy, Celery, Redis, PostgreSQL,
-              microservices, modular monoliths
-            </p>
-          </div>
-          <div class="skill">
-            <h3>Fintech APIs</h3>
-            <p>
-              Apache Fineract, payment intents, idempotency, transaction lifecycles, payment
-              state machines, reconciliation
-            </p>
-          </div>
-          <div class="skill wide">
-            <h3>Async and reliability</h3>
-            <p>
-              Celery periodic tasks, Redis locks, webhooks, Alembic, Pytest, Docker, Kubernetes,
-              Git, GitHub Actions, production debugging
-            </p>
-          </div>
-          <div class="skill">
-            <h3>Security and onboarding</h3>
-            <p>Keycloak, JWT, RBAC, OTP, KYB, audit logging, WSO2, SEP</p>
-          </div>
-          <div class="skill short">
-            <h3>Also</h3>
-            <p>Odoo 15/17/19 custom modules</p>
+          <div class="skills">
+            <div class="skill">
+              <h3>Backend</h3>
+              <p>
+                Python, FastAPI, Flask, REST APIs, SQLAlchemy, Celery, Redis, PostgreSQL,
+                microservices, modular monoliths
+              </p>
+            </div>
+            <div class="skill">
+              <h3>Fintech APIs</h3>
+              <p>
+                Apache Fineract, payment intents, idempotency, transaction lifecycles, payment
+                state machines, reconciliation
+              </p>
+            </div>
+            <div class="skill wide">
+              <h3>Async and reliability</h3>
+              <p>
+                Celery periodic tasks, Redis locks, webhooks, Alembic, Pytest, Docker, Kubernetes,
+                Git, GitHub Actions, production debugging
+              </p>
+            </div>
+            <div class="skill">
+              <h3>Security and onboarding</h3>
+              <p>Keycloak, JWT, RBAC, OTP, KYB, audit logging, WSO2, SEP</p>
+            </div>
+            <div class="skill">
+              <h3>Also</h3>
+              <p>Odoo 15/17/19 custom modules</p>
+            </div>
           </div>
         </section>
 

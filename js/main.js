@@ -21,7 +21,7 @@
 
   function paintChrome(theme) {
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute("content", theme === "dark" ? "#1c1b19" : "#f7f5f0");
+    if (meta) meta.setAttribute("content", theme === "dark" ? "#161311" : "#f6f1e6");
   }
 
   function apply(theme) {
