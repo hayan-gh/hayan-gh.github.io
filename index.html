@@ -115,7 +115,7 @@
 <span class="c-key">role</span>   <span class="c-val">Software Engineer</span>
 <span class="c-key">place</span>  <span class="c-val">Damascus, Syria</span>
 <span class="c-key">focus</span>  <span class="c-val">Python backend, Odoo ERP</span>
-<span class="c-key">now</span>    <span class="c-val">rmz · Wafra Pay</span>
+<span class="c-key">now</span>    <span class="c-val">rmz · e-wallet app</span>
 <span class="c-key">stack</span>  <span class="c-val">Python · FastAPI · PostgreSQL</span>
        <span class="c-val">Odoo · fintech</span>
 <span class="c-key">open</span>   <span class="c-val">relocation</span></code></pre>
@@ -136,53 +136,27 @@
               <p class="meta">Nov 2025 – Present · Full-time · On-site, Damascus</p>
               <ul>
                 <li>
-                  Started the Wafra Pay wallet backend (FastAPI, SQLAlchemy, PostgreSQL) as a
-                  modular monolith with Alembic: registration, OTP authentication, wallet
-                  provisioning, P2P transfers, QR merchant payments, and bill payments on an Apache
-                  Fineract ledger.
+                  Started the backend of a mobile e-wallet app as a FastAPI, SQLAlchemy and
+                  PostgreSQL modular monolith with Alembic, with payments on an Apache Fineract
+                  ledger.
                 </li>
                 <li>
                   Designed transaction safety around server-issued idempotency references and
-                  persisted payment intents; resolved ambiguous ledger outcomes through
-                  reconciliation, a background sweeper and classified connector responses.
-                </li>
-                <li>
-                  Implemented payment state machines for MTN, Syriatel and SEP integrations,
-                  including voucher workflows, and corrected SOAP request signing for accepted
-                  provider operations.
-                </li>
-                <li>
-                  Built bill-payment orchestration for biller catalogs, presentment, scheduled
-                  operations and reversal retries using Celery periodic tasks and Redis locks.
-                </li>
-                <li>
-                  Built merchant onboarding (KYB), QR and bill payments, agent escrow cash-out,
-                  maker-checker payment limits, and a loyalty ledger with earning rules, cashback,
-                  vouchers and fee waivers.
+                  persisted payment intents, and resolved ambiguous ledger outcomes through
+                  reconciliation.
                 </li>
                 <li>
                   Developed Flask and FastAPI services for Al Sharq Bank's Fintech Studio customer
-                  e-banking application and staff dashboard, secured with Keycloak and exposed
-                  through WSO2 API Manager.
+                  e-banking application and staff dashboard, and integrated MTN, Syriatel and SEP
+                  payments.
                 </li>
                 <li>
-                  Added Keycloak-powered financial PIN, password recovery, lockout, trusted-device
-                  and role workflows, and maker-checker approvals for corporate and merchant
-                  operations.
+                  Built the Wafra KYC identity-verification service and implemented staff RBAC and
+                  append-only audit trails.
                 </li>
                 <li>
-                  Integrated identity-verification start/status and approval webhooks, and added
-                  document-driven identity checks and staff review holds for mismatched customer
-                  data.
-                </li>
-                <li>
-                  Implemented staff RBAC, separate JWT audiences, append-only audit trails and
-                  correlation IDs; built bank deposit matching from statement lines with full or
-                  partial credits and an audit trail.
-                </li>
-                <li>
-                  Also worked on Odoo 19 development for Mawjud, a B2C e-commerce platform, and set
-                  up GitHub Actions deployment to staging and guarded production.
+                  Worked on Odoo 19 development for Mawjud, a B2C e-commerce platform, and set up
+                  GitHub Actions deployment to staging and guarded production.
                 </li>
               </ul>
             </li>

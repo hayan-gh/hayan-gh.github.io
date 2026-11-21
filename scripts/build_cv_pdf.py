@@ -94,16 +94,11 @@ def main():
     bullets(
         pdf,
         [
-            "Started the Wafra Pay wallet backend (FastAPI, SQLAlchemy, PostgreSQL) as a modular monolith with Alembic: registration, OTP authentication, wallet provisioning, P2P transfers, QR merchant payments, and bill payments on an Apache Fineract ledger.",
-            "Designed transaction safety around server-issued idempotency references and persisted payment intents; resolved ambiguous ledger outcomes through reconciliation, a background sweeper and classified connector responses.",
-            "Implemented payment state machines for MTN, Syriatel and SEP integrations, including voucher workflows, and corrected SOAP request signing for accepted provider operations.",
-            "Built bill-payment orchestration for biller catalogs, presentment, scheduled operations and reversal retries using Celery periodic tasks and Redis locks.",
-            "Built merchant onboarding (KYB), QR and bill payments, agent escrow cash-out, maker-checker payment limits, and a loyalty ledger with earning rules, cashback, vouchers and fee waivers.",
-            "Developed Flask and FastAPI services for Al Sharq Bank's Fintech Studio customer e-banking application and staff dashboard, secured with Keycloak and exposed through WSO2 API Manager.",
-            "Added Keycloak-powered financial PIN, password recovery, lockout, trusted-device and role workflows, and maker-checker approvals for corporate and merchant operations.",
-            "Integrated identity-verification start/status and approval webhooks, and added document-driven identity checks and staff review holds for mismatched customer data.",
-            "Implemented staff RBAC, separate JWT audiences, append-only audit trails and correlation IDs; built bank deposit matching from statement lines with full or partial credits and an audit trail.",
-            "Also worked on Odoo 19 development for Mawjud, a B2C e-commerce platform, and set up GitHub Actions deployment to staging and guarded production.",
+            "Started the backend of a mobile e-wallet app as a FastAPI, SQLAlchemy and PostgreSQL modular monolith with Alembic, with payments on an Apache Fineract ledger.",
+            "Designed transaction safety around server-issued idempotency references and persisted payment intents, and resolved ambiguous ledger outcomes through reconciliation.",
+            "Developed Flask and FastAPI services for Al Sharq Bank's Fintech Studio customer e-banking application and staff dashboard, and integrated MTN, Syriatel and SEP payments.",
+            "Built the Wafra KYC identity-verification service and implemented staff RBAC and append-only audit trails.",
+            "Worked on Odoo 19 development for Mawjud, a B2C e-commerce platform, and set up GitHub Actions deployment to staging and guarded production.",
         ],
     )
     role(pdf, "Backend Developer", "MadFox Solutions", "Aug 2024 – Nov 2025  ·  Full-time  ·  On-site, Syria")
